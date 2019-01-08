@@ -51,34 +51,6 @@ class Triangolo():
 
 #--------------------------------------------------------------
 #--------------------------------------------------------------
-class Vettore():
-    
-    #Documentazione: __doc__
-    """This class is for modelling a vector."""    
-    
-    # class variable shared by all instances
-    defDellaClasse='This is a vector.'
-    
-    # In pratica ist il costruttore della classe
-    def __init__(self, pointB, pointA ):
-        self.xB=pointB[0] 
-        self.yB=pointB[1] 
-
-        self.xA=pointA[0] 
-        self.yA=pointA[1] 
-
-        self.x= self.xB-self.xA
-        self.y= self.yB-self.yA
-
-        self.modulo = math.sqrt((self.x*self.x)+(self.y*self.y))
-        if self.x != 0:
-            self.fase = math.atan(self.y/self.x)
-        else:            
-            self.fase = math.pi
-    
-    def prodottoScalare(self,vettore2):        
-        risultato = self.x * vettore2.x + self.y * vettore2.y 
-        return risultato
 
 #--------------------------------------------------------------
 #--------------------------------------------------------------
@@ -127,28 +99,7 @@ puntoD=[0,1]
 puntoC=[0,0]
 
 
-vet01=Vettore(pointB=puntoB,pointA=puntoA)
-vet02=Vettore(pointB=puntoD,pointA=puntoC)
-
-print('----Componenti vettore1')
-print(vet01.__doc__)
-print(vet01.defDellaClasse)
-print(vet01.x)
-print(vet01.y)
-
-print(vet01.modulo)
-print(vet01.fase)
-
-print('----Componenti vettore2')
-print(vet02.defDellaClasse)
-print(vet02.x)
-print(vet02.y)
-
-print(vet02.modulo)
-print(vet02.fase)
 
 
-print('----prodotto scalare:')
-print(vet01.prodottoScalare(vet02))
 
 
