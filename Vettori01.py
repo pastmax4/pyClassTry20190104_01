@@ -5,6 +5,7 @@ Created on 07 dic 2018
 
 https://docs.python.org/3/tutorial/classes.html
 https://www.w3resource.com/python/python-object-classes.php
+Example of class 
 '''
 import math
 
